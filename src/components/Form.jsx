@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Results from "./components/Results";
+import Results from "./Results";
 
 const Form = () => {
   const [username, setUsername] = useState("");
@@ -15,8 +15,8 @@ const Form = () => {
           id="initialForm"
           onSubmit={(event) => {
             event.preventDefault();
-            // console.log(password, checkPassword);
-            if (password !== checkPassword) {
+            console.log(password, checkPassword);
+            if (!passwordOK) {
               alert("Les deux mots de passe ne correspondent pas");
             } else {
               setSwitchpage(true);
